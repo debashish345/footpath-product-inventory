@@ -20,4 +20,7 @@ public interface ParentCategoryRepo extends MongoRepository<ParentCategory, Stri
     @Query("{subCategoryList.specific : {$eq : ?0}}")
     Object existsBySpecific(String specific);
 
+    @Query("{$or : [{subCategoryList.scatId  : ?0}, {subCategoryList.specific  : ?1}]}")
+    Object existsBySubCatId(String scatId, String specific);
+
 }

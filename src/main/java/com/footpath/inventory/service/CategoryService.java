@@ -9,6 +9,6 @@ public interface CategoryService {
 
     ParentCategory newParentCategory(ParentCategory parentCategory);
 
-    List<ParentCategoryBean> getAllCategory();
+    List<ParentCategory> getAllCategory();
 
 }
